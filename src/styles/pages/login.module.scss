@@ -1,0 +1,107 @@
+* {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  .half-screen {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .form-login-wrapper {
+    background-color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-login {
+      background-color: $primary-color;
+      width: 45%;
+      height: 45%;
+      border: 3px solid;
+      border-radius: 20px;
+      padding: 5%;
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      label {
+        color: $secondary-color;
+        margin-bottom: 10px;
+        font-size: $normal-font-size;
+      }
+      span {
+        color: black;
+      }
+      input {
+        height: 40px;
+        border-radius: 10px;
+        border-color: $primary-color;
+        background-color: rgb(187, 187, 187);
+        color: black;
+        padding-left: 10px;
+        outline: none;
+      }
+
+      .form-title {
+        font-size: $big-font-size;
+        color: $secondary-color;
+      }
+
+      .button--login {
+        width: 50%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 4px 4px $shadow-color;
+        margin: 0 auto;
+        background-color: $secondary-color;
+        margin-bottom: 5px;
+        color: $primary-color;
+      }
+      .form-optinal {
+        margin-top: 10px;
+        font-size: $small-font-sixe;
+        .signup-link {
+          margin-left: 10px;
+          color: $secondary-color;
+          &:hover {
+            color: rgb(146, 240, 84);
+          }
+        }
+      }
+    }
+    .form-signup {
+      @extend .form-login;
+      min-height: 530px;
+
+      .button--signup{
+        @extend .button--login
+      }
+
+      .login-link {
+        @extend .signup-link;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .slide-image {
+    display: none;
+  }
+  .form-login-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 400px){
+  .form-login{
+    width: 100%;
+    border-radius: 0%;
+  }
+}
