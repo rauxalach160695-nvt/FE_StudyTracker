@@ -1,3 +1,23 @@
-div{
-    color: black;
+.home-container {
+  margin: 50px;
+  height: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE và Edge cũ */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  .component-test {
+    margin: 20px;
+    border-radius: 10%;
+    width: 400px;
+    min-width: 400px;
+    height: 400px;
+    min-height: 400px;
+    background-color: $secondary-color;
+  }
 }

@@ -4,7 +4,11 @@ import "../styles/pages/home.scss"
 
 function Home(){
     return (
-        <div>HOme is here</div>
+        <div className="home-container">
+            {Array.from({length:10}).map((_,index) => (
+                <div className="component-test">hahahahahahaha</div>
+            ))}
+        </div>
     )
 }
 
