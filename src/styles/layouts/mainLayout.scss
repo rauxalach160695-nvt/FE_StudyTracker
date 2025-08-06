@@ -3,31 +3,34 @@
   width: 3000px;
   display: flex;
   flex-direction: column;
-
   .page-body {
     display: flex;
     flex-direction: row;
     height: 2000px;
     background-color: $primary-color;
-    border-bottom: 3px solid $shadow-color;
+    border-bottom: 1px solid $shadow-color;
     .tag-select {
       min-width: 300px;
       padding-left: 10px;
-      padding-top: 50px;
-     
-      border-right: 3px solid $shadow-color;
+      padding-top: 40px;
+      border-right: 1px solid $shadow-color;
       .main-tag {
-        color: $shadow-color;
-        font-size: $normal-font-size;
+        color:$gray-color;
+        font-size: $middle-font-size;
         margin-left: 10px;
+        margin-top: 10px;
+        .empty-space{
+          height:20px;
+        }
         .selection {
-          height: 80px;
+          height: 50px;
           display: flex;
           align-items: center;
           margin-left: 30px;
           flex-direction: row;
           border-radius: 10px;
           margin-right: 10px;
+          cursor: pointer;
           &:hover{
             background-color: $secondary-color;
             i,
@@ -36,11 +39,11 @@
             }
         }
           i {
-            color: $shadow-color;
+            color:$gray-color;
             width: 50px;
           }
           .text-selection {
-            color: $shadow-color;
+            color:$gray-color;
             font-size: $normal-font-size;
             margin-left: 10px;
           }

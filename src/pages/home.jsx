@@ -1,11 +1,10 @@
 import Header from "../components/header"
 import MainLayout from "../layouts/mainLayout"
+import "../styles/pages/home.scss"
 
 function Home(){
     return (
-            <MainLayout>
-                <div>holyshittttttttt!</div>
-            </MainLayout>
+        <div>HOme is here</div>
     )
 }
 

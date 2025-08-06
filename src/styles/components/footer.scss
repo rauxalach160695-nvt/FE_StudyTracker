@@ -17,11 +17,13 @@
       border-bottom: 3px solid $primary-color;
       .title-content {
         margin-bottom: 20px;
+        color: $primary-color;
       }
       .text-content {
         padding-top: 10px;
         font-size: $small-font-size;
         font-weight: normal;
+        color: $primary-color;
       }
     }
   }
@@ -34,11 +36,17 @@
     .web-author{
         // width: 1000px;
         min-width: 1500px;
+        color: $primary-color;
     }
     .list-social-link{
         display: flex;
         min-width: 200px;
         justify-content: space-between;
+        color: $primary-color;
     }
   }
+}
+
+*{
+  color: $primary-color;
 }
