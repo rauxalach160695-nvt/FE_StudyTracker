@@ -1,0 +1,61 @@
+.drop-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: absolute;
+  top: 80%;
+  right: 100px;
+  margin-top: 8px;
+  max-height: 400px;
+
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+
+  .drop-option {
+    color: black;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    span {
+      margin-right: 20px;
+      color: red;
+      font-weight: normal;
+    }
+  }
+  .list-noti {
+    overflow-y: auto;
+    overflow: auto;
+    height: 300px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE và Edge cũ */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+    .noti {
+      color: black;
+      font-weight: normal;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      &:hover{
+        background-color: $secondary-color;
+      }
+      border-top: 3px solid $shadow-color;
+      .logo-noti{
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        .logo{
+            max-width: 50px;
+        }
+      }
+      .noti-text{
+        font-weight: normal;
+      }
+    }
+  }
+}

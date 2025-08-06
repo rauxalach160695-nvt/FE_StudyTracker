@@ -1,0 +1,69 @@
+.header-container {
+  width: 100vw;
+  height: 80px;
+  background-color: $primary-color;
+  display: flex;
+
+  .logo-field {
+    width: 300px;
+    min-width: 300px;
+    border-bottom: 3px solid $shadow-color;
+    border-right: 3px solid $shadow-color;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 10px;
+    .logo-image {
+      width: 20%;
+    }
+    .project-name {
+      color: black;
+      font-size: $normal-font-size;
+      font-weight: bold;
+    }
+  }
+  .header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border-bottom: 3px solid $shadow-color;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .page-title {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      min-width: 400px;
+      span{
+        color: black;
+        margin-left: 20px;
+        font-size: $small-font-size;
+      }
+    }
+    .notification-wrapper {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover{
+        background-color: $secondary-color;
+        border-radius: 50%;
+      }
+      span{
+        cursor: pointer;
+        color: black;
+        &:hover{
+            color: $primary-color;
+        }
+      }
+    }
+    .user-setting {
+      width: 250px;
+      color: black;
+    }
+  }
+}
+

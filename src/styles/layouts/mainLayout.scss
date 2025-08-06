@@ -1,0 +1,54 @@
+
+.main-layout {
+  width: 3000px;
+  display: flex;
+  flex-direction: column;
+
+  .page-body {
+    display: flex;
+    flex-direction: row;
+    height: 2000px;
+    background-color: $primary-color;
+    border-bottom: 3px solid $shadow-color;
+    .tag-select {
+      min-width: 300px;
+      padding-left: 10px;
+      padding-top: 50px;
+     
+      border-right: 3px solid $shadow-color;
+      .main-tag {
+        color: $shadow-color;
+        font-size: $normal-font-size;
+        margin-left: 10px;
+        .selection {
+          height: 80px;
+          display: flex;
+          align-items: center;
+          margin-left: 30px;
+          flex-direction: row;
+          border-radius: 10px;
+          margin-right: 10px;
+          &:hover{
+            background-color: $secondary-color;
+            i,
+            .text-selection{
+               color:$primary-color;
+            }
+        }
+          i {
+            color: $shadow-color;
+            width: 50px;
+          }
+          .text-selection {
+            color: $shadow-color;
+            font-size: $normal-font-size;
+            margin-left: 10px;
+          }
+        }
+      }
+      .other-tag{
+        @extend .main-tag
+      }
+    }
+  }
+}

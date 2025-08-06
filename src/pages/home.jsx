@@ -1,5 +1,12 @@
+import Header from "../components/header"
+import MainLayout from "../layouts/mainLayout"
+
 function Home(){
-    return <p>This is Home page</p>
+    return (
+            <MainLayout>
+                <div>holyshittttttttt!</div>
+            </MainLayout>
+    )
 }
 
 export default Home

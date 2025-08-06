@@ -65,10 +65,11 @@
       }
       .form-optinal {
         margin-top: 10px;
-        font-size: $small-font-sixe;
+        font-size: $small-font-size;
         .signup-link {
           margin-left: 10px;
           color: $secondary-color;
+          cursor: pointer;
           &:hover {
             color: rgb(146, 240, 84);
           }
