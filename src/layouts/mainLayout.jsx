@@ -14,8 +14,8 @@ function MainLayout({ children }) {
   },
   {
     id: 2,
-    tagName: "My Courses",
-    pageTitle: "My Courses Page",
+    tagName: "My Skill",
+    pageTitle: "My Skills Page",
     icon: "fa-solid fa-book "
   },
   {
@@ -56,7 +56,7 @@ function MainLayout({ children }) {
             
           </div>
         </div>
-        <main><Outlet/></main>
+        <main className="page-container"><Outlet/></main>
       </div>
       <Footer></Footer>
     </div>

@@ -3,21 +3,110 @@
   height: 95%;
   display: flex;
   flex-wrap: wrap;
-  max-width: 100vw;
-  overflow-y: auto;
+  max-width: 100%;
+  // overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE và Edge cũ */
-
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
   }
-  .component-test {
-    margin: 20px;
-    border-radius: 10%;
-    width: 400px;
-    min-width: 400px;
-    height: 400px;
-    min-height: 400px;
-    background-color: $secondary-color;
+  .overall {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 230px;
+    justify-content: space-between;
+    gap: 40px;
+    .per-overall {
+      width: 30;
+      min-width: 470px;
+      border: 2px solid $shadow-color;
+      border-radius: 10px;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .time-spend-today {
+      box-sizing: border-box;
+      padding: 30px 40px 30px 40px;
+      .hours {
+        padding-top: 30px;
+        padding-left: 100px;
+        font-size: 70px;
+        color: red;
+      }
+    }
+    .lastest-plan {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+      padding-left: 40px;
+      padding-right: 40px;
+      .plan-percentageDone {
+        width: 150px;
+        height: 150px;
+      }
+      .name-and-hours-plan {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .plan-title {
+          height: 70px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: black;
+        }
+        .plan-hours-spend {
+          color: black;
+        }
+      }
+    }
+    .overall-skill {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 30px 40px 30px 40px;
+      gap: 10px;
+      .skill-state {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        .state-title {
+          width: 300px;
+          margin-left: 10px;
+        }
+        .skill-bar {
+          width: 50px;
+          height: 50px;
+          font-size: 15px;
+        }
+      }
+      .skill-completed {
+        i {
+          color: #4ef259;
+        }
+      }
+      .skill-ongoing {
+        i {
+          color: #d7d716ff;
+        }
+      }
+      .skill-dropped {
+        i {
+          color: #fa3939;
+        }
+      }
+    }
   }
+  // .component-test {
+  //   margin: 20px;
+  //   border-radius: 10%;
+  //   width: 400px;
+  //   min-width: 400px;
+  //   height: 400px;
+  //   min-height: 400px;
+  //   background-color: $secondary-color;
+  // }
 }
