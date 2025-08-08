@@ -30,6 +30,7 @@
           flex-direction: row;
           border-radius: 10px;
           margin-right: 10px;
+          margin: 10px 10px 10px 30px;
           cursor: pointer;
           &:hover{
             background-color: $secondary-color;
@@ -48,6 +49,13 @@
             margin-left: 10px;
           }
         }
+        .active-selection{
+            background-color:rgba(92, 92, 92, 0.402);
+            i,
+            .text-selection{
+               color:$primary-color;
+            }
+          }
       }
       .other-tag{
         @extend .main-tag;
