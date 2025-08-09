@@ -2,8 +2,9 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import clsx from "clsx";
 import "../styles/layouts/mainLayout.scss";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function MainLayout({ children }) {
   const tagList = [
@@ -39,8 +40,10 @@ function MainLayout({ children }) {
     },
   ];
   const [activeIndex, setActiveIndex] = useState(null);
-  function selectionIndex() {
-    console.log("Button clicked!");
+  const navigate = useNavigate();
+  function navigateSlection(index) {
+    if (index === 0) navigate("/home");
+    else if (index === 1) navigate("/skills");
   }
 
   return (
@@ -54,10 +57,10 @@ function MainLayout({ children }) {
             {tagList.map((tag, index) => (
               <div
                 key={index}
-                className={
-                  `selection ${index === activeIndex ? "active-selection":""}`
-                }
-                onClick={() => (setActiveIndex(index), selectionIndex())}
+                className={`selection ${
+                  index === activeIndex ? "active-selection" : ""
+                }`}
+                onClick={() => (setActiveIndex(index), navigateSlection(index))}
               >
                 <i class={tag.icon}></i>
                 <div className="text-selection">{tag.tagName}</div>

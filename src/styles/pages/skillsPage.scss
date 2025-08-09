@@ -1,0 +1,31 @@
+.skills-page-container {
+//   width: 100%;
+  margin: 50px 50px 0px 50px;
+  height: 93%;
+  display: flex;
+  flex-direction: row;
+  .show-info-part {
+    flex:1;
+    min-width: 700px;
+    
+    .list-skills-part {
+        height: 500px;
+      /* Change active tab text color */
+      .tabs-list-skills{
+        // width: 50%;
+        .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+        color: $secondary-color; /* Example: Red */
+      }
+
+      /* Change active tab bottom bar color */
+      .ant-tabs-ink-bar {
+        background: $secondary-color; /* Example: Green */
+      }
+      }
+     
+    }
+  }
+  .control-part {
+    min-width: 485px;
+  }
+}
