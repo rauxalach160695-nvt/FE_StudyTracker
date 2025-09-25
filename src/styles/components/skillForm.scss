@@ -1,0 +1,49 @@
+.skill-form-container{
+    color: white;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column  ;
+    .skill-form-wrapper{
+        .space-gap{
+        height: 20px;
+        }
+        .skill-name{
+            input{
+                margin-left: 20px;
+                background-color: white;
+                color: black;
+                height: 30px;
+                min-width: 300px;
+                border-width: 1px;
+            }
+        }
+        .target-value{
+            input{
+                margin-left: 20px;
+                accent-color: white;
+                background-color: white; 
+                cursor: pointer;
+                &:checked{
+                    accent-color: $secondary-color;
+                    border-color: $secondary-color;
+                }
+            }
+        }
+        .description{
+            textarea{
+                margin-left: 20px;
+                background-color: white;
+                color:black;
+                min-width:300px ;
+                min-height: 80px;
+            }
+        }
+        button{
+            background-color: $secondary-color;
+            outline: none;  
+            &:hover{
+                background-color: rgb(110, 236, 110);
+            }
+        }
+    }
+}

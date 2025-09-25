@@ -51,3 +51,7 @@
 div,span,p,i,label{
   color:black;
 }
+
+button{
+  background-color: white;
+}

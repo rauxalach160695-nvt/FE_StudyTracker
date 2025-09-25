@@ -1,7 +1,8 @@
 import { List, Pagination, ConfigProvider} from "antd";
 import { useState } from "react";
+import "../styles/components/listSkills.scss"
 
-function listSkills({ data }) {
+function listSkills({ data, onSelect }) {
   const pageSize = 5; // số phần tử mỗi trang
   const [currentPage, setCurrentPage] = useState(1);
   // Cắt dữ liệu theo trang
@@ -19,7 +20,7 @@ function listSkills({ data }) {
         renderItem={(item) => (
           <List.Item>
             <div className="per-list-line">
-              <div className="skill-name">{item.name}</div>
+              <div className="skill-name" onClick={() => onSelect(1)}>{item.name}</div>
               <div className="skill-desc">{item.desc}</div>
             </div>
           </List.Item>

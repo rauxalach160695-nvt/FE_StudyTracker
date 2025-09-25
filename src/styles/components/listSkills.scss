@@ -1,0 +1,6 @@
+.skill-name{
+    cursor: pointer;
+    &:hover{
+        color: $secondary-color;
+    }
+}
